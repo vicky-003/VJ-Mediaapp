@@ -18,15 +18,16 @@ import com.example.social_mediavj.ui.SearchFragment
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    internal var selectedfragment: Fragment? = null
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.nav_home -> {
-                selectedfragment = HomeFragment()
+                moveToFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener true
             }
             R.id.nav_search -> {
-                selectedfragment = SearchFragment()
+                moveToFragment(SearchFragment())
+                return@OnNavigationItemSelectedListener true
             }
             R.id.nav_add_post -> {
                 item.isChecked = false
@@ -34,18 +35,13 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_notification -> {
-                selectedfragment = NotificationsFragment()
+                moveToFragment(NotificationsFragment())
+                return@OnNavigationItemSelectedListener true
             }
             R.id.nav_profile -> {
-                selectedfragment = ProfileFragment()
+                moveToFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener true
             }
-        }
-
-        if(selectedfragment != null){
-            supportFragmentManager.beginTransaction().replace(
-                R.id.fragment_container,
-                selectedfragment!!
-            ).commit()
         }
 
         false
@@ -53,26 +49,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
 
-
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-       // moveToFragment(HomeFragment())
-        supportFragmentManager.beginTransaction().replace(
-            R.id.fragment_container,
-            HomeFragment()
-        ).commit()
 
+        moveToFragment(HomeFragment())
     }
+
 
     private fun moveToFragment(fragment: Fragment)
     {
         val fragmentTrans = supportFragmentManager.beginTransaction()
-      //  fragmentTrans.replace(R.id.fragment_container, fragment)
-      //  fragmentTrans.commit()
+        fragmentTrans.replace(R.id.fragment_container, fragment)
+        fragmentTrans.commit()
     }
 }
