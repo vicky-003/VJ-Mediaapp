@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687981149088",
+    "project_id": "social-mediavj",
+    "storage_bucket": "social-mediavj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687981149088:android:bb0898e2b0ee9a281402c5",
+        "android_client_info": {
+          "package_name": "com.example.social_mediavj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687981149088-blhiimilpbuf151qfp27slb00eujhn2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Ptqiu7NSDmaAV0T9U-tv-KD9xOD5Wig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687981149088-blhiimilpbuf151qfp27slb00eujhn2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

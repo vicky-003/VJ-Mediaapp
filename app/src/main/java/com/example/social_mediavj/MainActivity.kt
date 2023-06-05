@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
         moveToFragment(HomeFragment())
     }
 
-
     private fun moveToFragment(fragment: Fragment)
     {
         val fragmentTrans = supportFragmentManager.beginTransaction()
