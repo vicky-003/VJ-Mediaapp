@@ -102,12 +102,12 @@ class SignUpActivity : AppCompatActivity() {
 
         val userMap = HashMap<String, Any>()
         userMap["uid"] = currentUserId
-        userMap["upfullname"] = currentUserId
-        userMap["upusername"] = currentUserId
-        userMap["upemail"] = currentUserId
-        userMap["bio"] = "hey i am using Coding Cafe social media app."
+        userMap["upfullname"] = upfullname.toLowerCase()
+        userMap["upusername"] = upusername.toLowerCase()
+        userMap["upemail"] = upemail
         userMap["image"] =
             "https://firebasestorage.googleapis.com/v0/b/social-mediavj.appspot.com/o/image%2Fprofile.png?alt=media&token=51085f10-ae2d-4d20-a289-501766ae9f40"
+        userMap["bio"] = "hey i am using Coding Cafe social media app."
 
         usersRef.child(currentUserId).setValue(userMap)
             .addOnCompleteListener { task ->
