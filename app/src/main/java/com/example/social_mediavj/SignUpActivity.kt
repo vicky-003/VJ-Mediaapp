@@ -36,7 +36,6 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var email: EditText
     lateinit var password: EditText
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -107,8 +106,8 @@ class SignUpActivity : AppCompatActivity() {
         userMap["upfullname"] = upfullname.lowercase(Locale.ROOT)
         userMap["upusername"] = upusername.lowercase(Locale.ROOT)
         userMap["upemail"] = upemail
-        userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/social-mediavj.appspot.com/o/image%2Fprofile.png?alt=media&token=51085f10-ae2d-4d20-a289-501766ae9f40"
         userMap["bio"] = "hey i am using Coding Cafe social media app."
+        userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/social-mediavj.appspot.com/o/image%2Fprofile.png?alt=media&token=51085f10-ae2d-4d20-a289-501766ae9f40"
 
         usersRef.child(currentUserId).setValue(userMap)
             .addOnCompleteListener { task ->
