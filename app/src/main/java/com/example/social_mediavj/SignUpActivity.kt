@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.util.*
+import kotlin.collections.HashMap
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -102,11 +104,10 @@ class SignUpActivity : AppCompatActivity() {
 
         val userMap = HashMap<String, Any>()
         userMap["uid"] = currentUserId
-        userMap["upfullname"] = upfullname.toLowerCase()
-        userMap["upusername"] = upusername.toLowerCase()
+        userMap["upfullname"] = upfullname.lowercase(Locale.ROOT)
+        userMap["upusername"] = upusername.lowercase(Locale.ROOT)
         userMap["upemail"] = upemail
-        userMap["image"] =
-            "https://firebasestorage.googleapis.com/v0/b/social-mediavj.appspot.com/o/image%2Fprofile.png?alt=media&token=51085f10-ae2d-4d20-a289-501766ae9f40"
+        userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/social-mediavj.appspot.com/o/image%2Fprofile.png?alt=media&token=51085f10-ae2d-4d20-a289-501766ae9f40"
         userMap["bio"] = "hey i am using Coding Cafe social media app."
 
         usersRef.child(currentUserId).setValue(userMap)

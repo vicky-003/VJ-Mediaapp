@@ -2,8 +2,8 @@ package com.example.social_mediavj.Model
 
 class User {
 
-    private var  upusername: String = ""
-    private var  upfullname: String = ""
+    var  upusername: String = ""
+    var  upfullname: String = ""
     private var  bio: String = ""
     private var  image: String = ""
     private var  uid: String = ""
@@ -12,44 +12,52 @@ class User {
 
     constructor( upusername: String,  upfullname: String, bio: String, image: String, uid: String){
         this.upusername = upusername
-        this.upfullname =upfullname
+        this.upfullname = upfullname
         this.bio = bio
         this.image = image
         this.uid = uid
     }
 
-    fun getUsername(): String{
+    fun getUsername(): String
+    {
         return upusername
     }
-    fun setUsername(upusername: String){
+
+    fun setUsername(upusername: String)
+    {
         this.upusername = upusername
     }
 
-    fun getFullname(): String{
+    fun getFullname(): String
+    {
         return upfullname
     }
-    fun setFullname(upfullname: String){
+
+    fun setFullname(upfullname: String)
+    {
         this.upfullname = upfullname
     }
 
     fun getBio(): String{
         return bio
     }
-    fun setbio(bio: String){
+    fun setBio(bio: String){
         this.bio = bio
     }
 
-    fun getImage(): String{
+    fun getImage(): String
+    {
         return image
     }
-    fun setimage(image: String){
+    fun setImage(image: String)
+    {
         this.image = image
     }
 
-    fun getUid(): String{
+    fun getUID(): String{
         return uid
     }
-    fun setUid(uid: String){
+    fun setUID(uid: String){
         this.uid = uid
     }
 }

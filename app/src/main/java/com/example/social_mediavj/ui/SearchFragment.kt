@@ -1,6 +1,5 @@
 package com.example.social_mediavj.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,17 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.social_mediavj.AccountSettingActivity
 import com.example.social_mediavj.Adapter.UserAdapter
 import com.example.social_mediavj.Model.User
-import com.example.social_mediavj.R
-import com.example.social_mediavj.databinding.FragmentProfileBinding
 import com.example.social_mediavj.databinding.FragmentSearchBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class SearchFragment : Fragment() {
@@ -43,7 +40,9 @@ class SearchFragment : Fragment() {
     ): View? {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        recyclerView = view?.findViewById(R.id.recycler_view_search)
+      //  recyclerView = view?.findViewById(R.id.recycler_view_search)
+        recyclerView = binding.recyclerViewSearch
+
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
@@ -62,7 +61,7 @@ class SearchFragment : Fragment() {
                     recyclerView?.visibility = View.VISIBLE
 
                     retrieveUsers()
-                    searchUser(s.toString().toLowerCase())
+                    searchUser(s.toString().lowercase(Locale.ROOT))
                 }
             }
 
@@ -103,6 +102,7 @@ class SearchFragment : Fragment() {
     private fun retrieveUsers() {
         val usersRef = FirebaseDatabase.getInstance().reference.child("Users")
         usersRef.addValueEventListener(object : ValueEventListener {
+
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (binding.searchEditText.text.toString() == "") {
                     mUser?.clear()
