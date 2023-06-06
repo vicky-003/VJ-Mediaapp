@@ -153,11 +153,11 @@ class ProfileFragment : Fragment() {
     }
 
     private fun getFollowing() {
-        val followersRef = FirebaseDatabase.getInstance().reference
+        val followingref = FirebaseDatabase.getInstance().reference
                 .child("Follow").child(profileId)
                 .child("Following")
 
-        followersRef.addValueEventListener(object : ValueEventListener{
+        followingref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
                     binding.totalFollowing.text = snapshot.childrenCount.toString()
