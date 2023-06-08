@@ -5,6 +5,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="100dp"
     android:layout_marginLeft="100dp"
+    android:padding="10dp"
     android:background="@drawable/button_black_background">
 
     <RelativeLayout

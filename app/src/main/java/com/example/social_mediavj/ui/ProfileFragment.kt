@@ -13,6 +13,7 @@ import com.example.social_mediavj.Model.User
 import com.example.social_mediavj.R
 import com.example.social_mediavj.databinding.ActivityMainBinding
 import com.example.social_mediavj.databinding.FragmentProfileBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -21,12 +22,12 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
 
-
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     private lateinit var profileId: String
     private lateinit var firebaseUser: FirebaseUser
+    private lateinit var dialog: BottomSheetDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +56,13 @@ class ProfileFragment : Fragment() {
             checkFollowAndFollowingButtonStatus()
         }
 
+        binding.optionView.setOnClickListener{
+           val dialogView = layoutInflater.inflate(R.layout.settingbottomsheet, null)
+            dialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
+            dialog.setContentView(dialogView)
+            dialog.show()
+        }
+
         binding.editAccountSettingProfileFra.setOnClickListener{
 
             val getButtonText = binding.editAccountSettingProfileFra.text.toString()
@@ -76,7 +84,6 @@ class ProfileFragment : Fragment() {
                             .child("Follow").child(profileId)
                             .child("Followers").child(it1.toString())
                             .setValue(true)
-
                     }
                 }
 
@@ -94,7 +101,6 @@ class ProfileFragment : Fragment() {
                             .child("Follow").child(profileId)
                             .child("Followers").child(it1.toString())
                             .removeValue()
-
                     }
                 }
             }

@@ -7,6 +7,10 @@
     android:background="@drawable/back_ui"
     tools:context=".SignUpActivity">
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
     <ImageView
         android:id="@+id/logo_signup"
         android:layout_width="160dp"
@@ -94,6 +98,8 @@
         android:text="Already Have an Account? Sign In"
         android:textColor="@color/white"
         android:textAllCaps="false"
-        android:textSize="17dp"  />
+        android:textSize="15dp"  />
+
+    </RelativeLayout>
 
 </RelativeLayout>
