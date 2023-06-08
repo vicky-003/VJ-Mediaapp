@@ -16,7 +16,7 @@
         android:layout_width="160dp"
         android:layout_height="90dp"
         android:src="@drawable/instagram"
-        android:tint="@color/white"
+        android:tint="@color/background_color"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"  />
 
@@ -54,9 +54,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="6dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/background_color"
         android:text="Login"
-        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textColor="@color/textcolor"
         android:textAllCaps="false"
         android:textSize="17dp"  />
 
@@ -71,7 +72,7 @@
         android:layout_marginBottom="45dp"
         android:text="Need New Account? Sign Up"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/textcolor"
         android:textSize="17dp" />
 
     </RelativeLayout>

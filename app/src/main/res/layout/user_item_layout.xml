@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Username"
-            android:textColor="@android:color/black"
+            android:textColor="@color/textcolor"
             android:gravity="center"
             android:textSize="12dp"
             android:layout_below="@+id/user_profile_image_search" />
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:text="User profile name"
-            android:textColor="@android:color/black"
+            android:textColor="@color/textcolor"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="12dp"
@@ -53,6 +53,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:text="Follow"
+            android:textColor="@color/textcolor"
             android:textAllCaps="false" />
 
     </RelativeLayout>

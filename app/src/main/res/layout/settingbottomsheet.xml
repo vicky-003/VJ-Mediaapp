@@ -29,10 +29,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/background_color"
             android:gravity="center|start"
             android:text="Setting"
-            android:textColor="@color/black"
+            android:textColor="@color/textcolor"
             android:textSize="20dp"
             android:textStyle="bold" />
     </LinearLayout>

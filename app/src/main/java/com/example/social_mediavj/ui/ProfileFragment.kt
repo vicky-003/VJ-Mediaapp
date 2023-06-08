@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.social_mediavj.AccountSettingActivity
+import com.example.social_mediavj.DarkModeActivity
 import com.example.social_mediavj.Model.User
 import com.example.social_mediavj.R
 import com.example.social_mediavj.databinding.ActivityMainBinding
@@ -61,6 +63,11 @@ class ProfileFragment : Fragment() {
             dialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDialogTheme)
             dialog.setContentView(dialogView)
             dialog.show()
+
+            dialogView.findViewById<TextView>(R.id.setting_bottom_sheet).setOnClickListener{
+               val intent = Intent(requireContext(),DarkModeActivity::class.java)
+                startActivity(intent)
+            }
         }
 
         binding.editAccountSettingProfileFra.setOnClickListener{

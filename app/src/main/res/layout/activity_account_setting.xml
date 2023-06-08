@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="6dp"
-        android:textColor="@color/white"
+        android:textColor="@color/textcolor"
         android:textSize="16dp"
       android:text="Delete Account"
         android:textAllCaps="false"
