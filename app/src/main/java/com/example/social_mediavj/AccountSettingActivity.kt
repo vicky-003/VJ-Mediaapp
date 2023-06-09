@@ -10,6 +10,7 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.example.social_mediavj.Model.User
 import com.example.social_mediavj.databinding.ActivityAccountSettingBinding
+import com.example.social_mediavj.ui.ProfileFragment
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -52,9 +53,9 @@ class AccountSettingActivity : AppCompatActivity() {
 
         binding.logoutBtn.setOnClickListener{
             auth.signOut()
-            val intent = Intent(this@AccountSettingActivity, SignInActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
+            val i4 = Intent(this@AccountSettingActivity, SignInActivity::class.java)
+            i4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(i4)
             finish()
         }
 
@@ -64,6 +65,11 @@ class AccountSettingActivity : AppCompatActivity() {
             CropImage.activity()
                 .setAspectRatio(1, 1)
                 .start(this@AccountSettingActivity)
+        }
+
+        binding.closeProfileBtn.setOnClickListener{
+            val i1 = Intent(this@AccountSettingActivity, MainActivity::class.java)
+            startActivity(i1)
         }
 
         binding.saveInforProfileBtn.setOnClickListener{
@@ -109,8 +115,8 @@ class AccountSettingActivity : AppCompatActivity() {
                 Toast.makeText(this, "Account Information has been updated successfully", Toast.LENGTH_LONG)
                     .show()
 
-                val intent = Intent(this@AccountSettingActivity, MainActivity::class.java)
-                startActivity(intent)
+                val i3 = Intent(this@AccountSettingActivity, MainActivity::class.java)
+                startActivity(i3)
                 finish()
             }
         }
@@ -182,8 +188,8 @@ class AccountSettingActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "Account Information has been updated successfully.", Toast.LENGTH_LONG).show()
 
-                        val intent = Intent(this@AccountSettingActivity, MainActivity::class.java)
-                        startActivity(intent)
+                        val i2 = Intent(this@AccountSettingActivity, MainActivity::class.java)
+                        startActivity(i2)
                         finish()
                         progressDialog.dismiss()
                     }

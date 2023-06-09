@@ -6,35 +6,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
+    android:background="@color/background_color"
     tools:context=".DarkModeActivity">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/dark_Mode_Text"
-            android:layout_width="300dp"
+            android:layout_width="284dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:gravity="center|start"
             android:text="Dark Mode"
-            android:textSize="20dp"
             android:textColor="@color/textcolor"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/dark_Mode_Switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:checked="false"
             android:src="@drawable/ic_baseline_settings_24" />
 
-    </LinearLayout>
-
+    </RelativeLayout>
 
 </LinearLayout>

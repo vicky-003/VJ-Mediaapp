@@ -46,6 +46,11 @@ class AddPostActivity : AppCompatActivity() {
             uploadImage()
         }
 
+        binding.closeAddPostBtn.setOnClickListener{
+            val i1 = Intent(this@AddPostActivity, MainActivity::class.java)
+            startActivity(i1)
+        }
+
         CropImage.activity()
             .setAspectRatio(2, 1)
             .start(this@AddPostActivity)

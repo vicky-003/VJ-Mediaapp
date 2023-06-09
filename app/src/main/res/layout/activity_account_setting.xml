@@ -14,7 +14,7 @@
         android:id="@+id/app_bar_layout_Aprofile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:background="@color/background_color">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/Aprofile_toolbar"
@@ -22,8 +22,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="6dp"
             android:layout_marginTop="4dp"
-            android:layout_marginRight="6dp"
-            android:background="@android:color/white">
+            android:layout_marginRight="6dp" >
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -118,6 +117,7 @@
         android:layout_marginBottom="6dp"
         android:text="Logout"
         android:textSize="16dp"
+        android:textColor="@color/textcolor"
         android:textAllCaps="false"
         android:layout_marginRight="20dp"
         android:layout_above="@+id/delete_account_btn" />
