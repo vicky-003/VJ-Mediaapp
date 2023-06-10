@@ -21,6 +21,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
+            app:tint="@color/textcolor"
             android:src="@drawable/ic_baseline_settings_24" />
 
         <TextView

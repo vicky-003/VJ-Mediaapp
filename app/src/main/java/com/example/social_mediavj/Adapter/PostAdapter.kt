@@ -1,13 +1,17 @@
 package com.example.social_mediavj.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.NonNull
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.social_mediavj.CommentsActivity
+import com.example.social_mediavj.MainActivity
 import com.example.social_mediavj.Model.Post
 import com.example.social_mediavj.Model.User
 import com.example.social_mediavj.R
@@ -58,6 +62,8 @@ class PostAdapter(private val mcontext: Context,
         var description: TextView
         var comments: TextView
 
+
+
         init {
             profileImage = itemView.findViewById(R.id.user_profile_image_post)
             postImage = itemView.findViewById(R.id.post_image_home)
@@ -69,7 +75,14 @@ class PostAdapter(private val mcontext: Context,
             publisher = itemView.findViewById(R.id.publisher)
             description = itemView.findViewById(R.id.description)
             comments = itemView.findViewById(R.id.comments)
+
+
+            commentButton.setOnClickListener{
+                val intent = Intent(mcontext, CommentsActivity::class.java)
+                mcontext.startActivity(intent)
+            }
         }
+
 
     }
 

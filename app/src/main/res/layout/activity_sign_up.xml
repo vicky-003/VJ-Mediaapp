@@ -86,7 +86,24 @@
         android:textAllCaps="false"
         android:textSize="17dp"  />
 
-    <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an sccount? Log in"
+            android:layout_below="@id/signup_btn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="78dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/textcolor"
+            android:id="@+id/signin_link_btn"
+            />
+
+   <!-- <Button
         android:id="@+id/signin_link_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,7 +115,7 @@
         android:text="Already Have an Account? Sign In"
         android:textColor="@color/textcolor"
         android:textAllCaps="false"
-        android:textSize="15dp"  />
+        android:textSize="15dp"  />-->
 
     </RelativeLayout>
 

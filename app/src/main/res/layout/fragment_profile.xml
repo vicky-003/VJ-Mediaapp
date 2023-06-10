@@ -45,7 +45,8 @@
                     android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/options" />
+                    android:src="@drawable/options"
+                    app:tint="@color/textcolor" />
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -229,16 +230,19 @@
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:tint="@color/textcolor"
                     android:src="@drawable/grid" />
 
                 <ImageButton
                     android:id="@+id/image_save_btn"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="1dp"
-                    android:layout_height="49dp"
+                    android:layout_height="45dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/save_large_icon" />
+                    app:tint="@color/textcolor"
+                    android:src="@drawable/save_unfilled_large_icon" />
 
             </LinearLayout>
 

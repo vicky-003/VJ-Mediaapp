@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.social_mediavj.databinding.ActivityMainBinding
 import com.example.social_mediavj.databinding.ActivitySignUpBinding
@@ -29,7 +30,7 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var upemail: String
     lateinit var uppassword: String
 
-    lateinit var signin: Button
+    lateinit var signin: TextView
     lateinit var signup: Button
     lateinit var fullname: EditText
     lateinit var username: EditText

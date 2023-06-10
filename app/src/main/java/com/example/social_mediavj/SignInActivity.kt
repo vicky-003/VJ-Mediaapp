@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -25,7 +26,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        var signup = findViewById<Button>(R.id.signup_link_btn)
+        var signup = findViewById<TextView>(R.id.signup_link_btn)
         var login = findViewById<Button>(R.id.login_btn)
 
         email = findViewById(R.id.email_login)

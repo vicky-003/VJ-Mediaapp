@@ -20,6 +20,7 @@
             android:id="@+id/linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -44,11 +45,10 @@
         </LinearLayout>
 
 
-
         <ImageView
             android:id="@+id/post_image_home"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="300dp"
             android:src="@drawable/profile"
             android:scaleType="centerCrop"
             />
@@ -63,6 +63,7 @@
                 android:id="@+id/post_image_like_btn"
                 android:layout_width="41dp"
                 android:layout_height="40dp"
+                app:tint="@color/textcolor"
                 android:src="@drawable/heart_not_clicked"
                 />
 
@@ -71,6 +72,7 @@
                 android:layout_width="40dp"
                 android:layout_height="34dp"
                 android:src="@drawable/comment"
+                app:tint="@color/textcolor"
                 android:layout_toEndOf="@+id/post_image_like_btn"
                 android:layout_marginTop="3dp"
                 android:layout_marginStart="6dp"
@@ -80,6 +82,7 @@
                 android:id="@+id/post_save_comment_btn"
                 android:layout_width="40dp"
                 android:layout_height="39dp"
+                app:tint="@color/textcolor"
                 android:src="@drawable/save_unfilled_large_icon"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="0dp"

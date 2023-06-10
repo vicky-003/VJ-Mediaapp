@@ -33,8 +33,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:checked="false"
-            android:src="@drawable/ic_baseline_settings_24" />
+            app:tint="@color/textcolor"
+            android:checked="false" />
 
     </RelativeLayout>
 
